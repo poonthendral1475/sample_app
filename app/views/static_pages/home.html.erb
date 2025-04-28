@@ -1,10 +1,17 @@
 <% provide(:title , "Home") %>
 
-<h1 style="text-align: center"><%= @name %></h1>
+
+<h1><%= is_blank?(@name) %></h1>
+
 <h4><%= @time %></h4>
+<%= sort_this(@arr) %><br>
+<%#= @arr.join("") %>
+<br>
+<br>
+<p style="text-align: center"><%= @arr.sample %></p>
 <a href="https://www.railstutorial.org/" target="_blank">click</a>
 <p>tattatata</p>
-<marquee>Ruby Guard is a tool that automatically runs your tests whenever your code changes.</marquee>
+<marquee id="marq" style="font-size: 25px">If this example strikes you as a bit contrived, good—this is by design. It’s odd to create a new class just to create a method that takes a string as an argument.</marquee>
 <select>
   <option selected>options</option>
   <option>a</option>

@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-    @name="poonthendral"
+    @name="kutty"
+    @arr=[39,34,543,1,2,-7,-3]
     @time=Time.now
   end
 
