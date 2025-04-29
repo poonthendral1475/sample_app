@@ -7,6 +7,10 @@ ruby '2.7.5'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.10'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
+
+gem 'bootstrap', '~> 4.5'
+
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -31,6 +35,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rails-controller-testing'
   gem 'pry-rails'
   gem 'pry'
 

@@ -13,13 +13,10 @@
  *= require_tree .
  *= require_self
  */
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.kit_img
+{
+    box-shadow: 5px 4px 10px gray;
+    border-radius: 5px;
+
 }
-#marq{
-    background-color: gray;
-}
+
