@@ -7,10 +7,12 @@ ruby '2.7.5'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.10'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
+#helps to make hashed password
+gem 'bcrypt',         '3.1.13'
 
 gem 'bootstrap', '~> 4.5'
 
-
+# gem "sqlite3"
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
