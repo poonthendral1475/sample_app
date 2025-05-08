@@ -20,15 +20,10 @@ ActiveRecord::Schema.define(version: 2025_05_05_055418) do
     t.integer "age"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "email"
+    t.string "email", null: false
+    t.string "action", default: "active", null: false
     t.float "height"
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_dummies_on_email", unique: true
   end
 
   create_table "users", force: :cascade do |t|

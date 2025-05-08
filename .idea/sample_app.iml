@@ -112,7 +112,6 @@
     <orderEntry type="library" scope="PROVIDED" name="spring (v4.3.0, Remote-rbenv: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.2, Remote-rbenv: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.5.2, Remote-rbenv: ruby-2.7.5-p203) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.4.4, Remote-rbenv: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.3.2, Remote-rbenv: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v2.6.0, Remote-rbenv: ruby-2.7.5-p203) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.4.3, Remote-rbenv: ruby-2.7.5-p203) [gem]" level="application" />

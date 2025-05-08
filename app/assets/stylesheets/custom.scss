@@ -1,6 +1,12 @@
 //@import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 body{
   height: 100vh;
 }
@@ -111,3 +117,207 @@ footer {
   }
 
 }
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+.name{
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.followup{
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  top: 20px;
+  font-weight: bolder;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+.input-container-main{
+  //border: 2px solid green;
+  height: 60vh;
+  display: grid;
+  place-items: center;
+}
+.input-container{
+  //border: 2px solid red;
+  height: 80%;
+  width: 35%;
+  padding: 30px 20px 10px 20px;
+  border-radius: 20px;
+  background-color: #DADADA;
+
+  input{
+    padding: 5px;
+  }
+ .btn-center {
+   display: flex;
+   justify-content: center;
+
+   .submit-btn {
+     margin-top: 15px;
+     display: inline-block;
+     width: 40%;
+   }
+
+ }
+  #error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  .field_with_errors {
+    //@extend .has-error;
+    .form-control {
+      border-color: red;
+    }
+  }
+}
+
+.flash-msg{
+  text-align: center;
+  color: green;
+  //border: 2px solid red;
+  font-weight: bolder;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+/* forms */
+
+//input, textarea, select, .uneditable-input {
+//  border: 1px solid #bbb;
+//  width: 100%;
+//  margin-bottom: 15px;
+//  @include box_sizing;
+//}
+//
+//input {
+//  height: auto !important;
+//}
+//
+//.input-container-main {
+//  //border: 2px solid green;
+//  height: 60vh;
+//  display: grid;
+//  place-items: center;
+//}
+//
+//.input-container {
+//  //border: 2px solid red;
+//  height: 90%;
+//  width: 35%;
+//  padding: 50px 20px;
+//  border-radius: 20px;
+//  background-color: #DADADA;
+//
+//  input {
+//    padding: 5px;
+//  }
+//
+//  .btn-center {
+//    display: flex;
+//    justify-content: center;
+//
+//    .submit-btn {
+//      margin-top: 15px;
+//      display: inline-block;
+//      width: 40%;
+//    }
+//  }
+//
+//  /* Top-level error explanation box (optional) */
+//  #error_explanation {
+//    color: red;
+//
+//    ul {
+//      color: red;
+//      margin: 0 0 30px 0;
+//      padding-left: 20px;
+//    }
+//  }
+//
+//  /* Field-specific error styling */
+//  .field_with_errors {
+//    input,
+//    textarea,
+//    select {
+//      border-color: red;
+//      background-color: #ffe6e6;
+//    }
+//
+//    .form-control {
+//      color: red;
+//    }
+//  }
+//
+//  /* Inline error text styling */
+//  .field-error {
+//    color: red;
+//    font-size: 0.9em;
+//    margin-top: -10px;
+//    margin-bottom: 10px;
+//  }
+//}
+

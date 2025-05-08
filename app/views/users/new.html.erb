@@ -1,3 +1,26 @@
 <% provide(:title , "Sign up") %>
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Sign up</h1>
+<%= render "shared/errors_messages" %>
+<div class="row input-container-main">
+  <div class="input-container">
+    <%= form_with(model: @user , local: true) do |form| %>
+      <%= form.label :name%>
+      <%= form.text_field :name, class: 'form-control' %>
+
+      <%= form.label :email %>
+      <%= form.email_field :email, class: 'form-control'  %>
+
+      <%= form.label :password %>
+      <%= form.password_field :password, class: 'form-control'  %>
+
+      <%= form.label :password_confirmation %>
+      <%= form.password_field :password_confirmation, class: 'form-control'  %>
+
+    <div class="btn-center">
+      <%= form.submit "create" , class: "submit-btn btn btn-primary"%>
+    </div>
+    <% end %>
+
+
+  </div>
+</div>
