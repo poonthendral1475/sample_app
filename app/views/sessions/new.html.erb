@@ -1,0 +1,20 @@
+<%= provide(:title,"Log-in") %>
+<h1>Sign-in</h1>
+<div class="row input-container-main">
+  <div class="input-container">
+<%= form_with(url: "/login", scope: :session, local: true) do |form| %>
+  <%= form.label :email %>
+  <%= form.email_field :email, class: 'form-control' %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password, class: 'form-control' %>
+      <div class="btn-center">
+  <%= form.submit "Log in", class: "submit-btn btn btn-primary" %>
+      </div>
+<% end %>
+
+
+<p>Don’t have an Account? <span class="orange_link"><%= link_to "Sign-Up >" , signup_path %></span></p>
+
+  </div>
+</div>

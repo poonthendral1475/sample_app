@@ -9,18 +9,58 @@
 
 body{
   height: 100vh;
+  //background-color: #222222;
 }
-.right_nav{
-  display: flex;
-  justify-content: space-around;
+// nav bar
+.navbar {
+  height: 85px;
+  border-bottom: 2px solid #343A40;
+  box-shadow: 10px 10px 10px gray;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+}
+.sample-app{
+  color: white !important;
   font-weight: bolder;
-  width: 70%;
-  a{
-    color: white;
+}
+.nav-height{
+  height: 85px !important;
+}
+.left_nav {
+  display: flex;
+  justify-content: end;
+
+  ul {
+    display: flex;        // Ensure `ul` items are in a row if needed
+    gap: 100px;
+
+    li a {
+      position: relative; // Needed for pseudo-element
+
+      &:hover {
+        font-weight: bold;
+        transform: scale(1.3);
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 1px; // Adjust spacing from text
+          width: 100%;
+          height: 2px;
+          background-color: black; // Change to your desired underline color
+        }
+      }
+    }
   }
 }
+
 .container {
-  padding-top: 20px;
+  //height: calc(100vh - 200px);
+  margin-top: 130px;
 }
 
 section {
@@ -43,6 +83,9 @@ textarea {
   }
   .signup-btn{
     margin-top: 55px;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -182,7 +225,7 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid black;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
@@ -199,14 +242,15 @@ input {
 }
 .input-container{
   //border: 2px solid red;
-  height: 80%;
+  //height: 80%;
   width: 35%;
   padding: 30px 20px 10px 20px;
   border-radius: 20px;
-  background-color: #DADADA;
+  //background-color: #DADADA;
 
   input{
     padding: 5px;
+
   }
  .btn-center {
    display: flex;
@@ -234,6 +278,12 @@ input {
     }
   }
 }
+.form-control{
+  &:focus{
+    border: 1px solid rgba(255, 165, 0, 0.5) !important;
+    box-shadow: 0 0 0 0.15rem rgba(255, 165, 0, 0.5) !important;
+  }
+}
 
 .flash-msg{
   text-align: center;
@@ -244,80 +294,59 @@ input {
   letter-spacing: 5px;
 }
 
-/* forms */
 
-//input, textarea, select, .uneditable-input {
-//  border: 1px solid #bbb;
-//  width: 100%;
-//  margin-bottom: 15px;
-//  @include box_sizing;
-//}
-//
-//input {
-//  height: auto !important;
-//}
-//
-//.input-container-main {
-//  //border: 2px solid green;
-//  height: 60vh;
-//  display: grid;
-//  place-items: center;
-//}
-//
-//.input-container {
-//  //border: 2px solid red;
-//  height: 90%;
-//  width: 35%;
-//  padding: 50px 20px;
-//  border-radius: 20px;
-//  background-color: #DADADA;
-//
-//  input {
-//    padding: 5px;
-//  }
-//
-//  .btn-center {
-//    display: flex;
-//    justify-content: center;
-//
-//    .submit-btn {
-//      margin-top: 15px;
-//      display: inline-block;
-//      width: 40%;
-//    }
-//  }
-//
-//  /* Top-level error explanation box (optional) */
-//  #error_explanation {
-//    color: red;
-//
-//    ul {
-//      color: red;
-//      margin: 0 0 30px 0;
-//      padding-left: 20px;
-//    }
-//  }
-//
-//  /* Field-specific error styling */
-//  .field_with_errors {
-//    input,
-//    textarea,
-//    select {
-//      border-color: red;
-//      background-color: #ffe6e6;
-//    }
-//
-//    .form-control {
-//      color: red;
-//    }
-//  }
-//
-//  /* Inline error text styling */
-//  .field-error {
-//    color: red;
-//    font-size: 0.9em;
-//    margin-top: -10px;
-//    margin-bottom: 10px;
-//  }
-//}
+.orange_link a
+{
+  color: darkorange;
+  font-weight: bold;
+}
 
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+    ul {
+      float: none;
+      padding: 0;
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 986px) {
+
+  .left_nav {
+    background-color: #343A40;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      gap: 2px;
+      width: 25%;
+
+      li {
+        border: 2px solid black;
+        text-align: center;
+      }
+
+      li a {
+
+        &:hover {
+          font-weight: normal;
+          transform: none;
+
+          &::after {
+            content: none;
+          }
+        }
+
+      }
+    }
+  }
+}
