@@ -6,6 +6,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_no_difference 'User.count' do
       post users_path, params: { user: { name: "", email: "abc@example", password: "123", password_confirmation: "321" } }
     end
+    assert_not is_logged_in?
     assert_template 'users/new'
     assert_select 'div#error_explanation'
   end

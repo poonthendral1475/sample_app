@@ -15,7 +15,7 @@ module SessionsHelper
 
   def log_out
     reset_session
-    @current_user = nil # its not mandatory because you immediately redirect after logging out
+    @current_user = nil # it's not mandatory because you immediately redirect after logging out
   end
 end
 

@@ -12,7 +12,11 @@ gem 'bcrypt',         '3.1.13'
 
 gem 'bootstrap', '~> 4.5'
 
+gem 'sidekiq'
+gem 'redis'
+
 # gem "sqlite3"
+gem 'dotenv-rails', groups: [:development, :test]
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
